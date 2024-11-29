@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+:root 
+{
+    --main-font: 'Gloock', serif;
+}
+
+* 
+{
+    box-sizing: border-box;
+}
+
+h1,
+h2 
+{
+    font-family: var( --main-font );
+    text-align: center;
+}
+
+h2 
+{
+    font-size: 40px;
+}
+
+h3 
+{
+    font-family: var( --main-font );
+    font-size: 30px;
+    text-align: left;
+}
+
+/*HEADER SECTION*/
+
+.shine 
+{
+    background-image: linear-gradient(0.15turn,
+            #000 40%,
+            #a8a8a8 50%,
+            #000 60%);
+
+    /* The value text means the background will not extend passed the 
+    visible areas of text within the element. This CSS property is not 
+    compatible with all browsers. In fact it will not work with "Chrome"
+    browsers, I will need to use some additional vendor prefix properties.
+     */
+    background-clip: text;
+
+    /*vendor prefix - webkit for Safari, Chrome, and newer versions of Opera
+    and moz is for Firefox*/
+    -webkit-background-clip: text;
+
+    /* This will remove the default text color applied by the browser and allow 
+    the linear gradient and background images to be visible */
+    -webkit-text-fill-color: transparent;
+
+}
+
+/*add transition properties in video*/
+.header 
+{
+    padding-top: 150px;
+    font-size: 150px;
+    transition: .5s ease;
+}
+
+/*Add header-scrolled class in video*/
+.header-scrolled 
+{
+    font-size: 100px;
+    transition: 0.5s ease;
+}
+
+.car-title 
+{
+    font-size: 30px;
+    /* Hides the car's image title for show and hide
+    The JQuery effect */
+    display: none;
+}
+
+.container 
+{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row 
+{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.column 
+{
+    width: 33%;
+    margin: 40px;
+}
+
+img 
+{
+    /* Takes up 100% of the space in each column */
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px -9px rgba( 60, 60, 60, 0.35 ),
+        10px 10px 10px -9px rgba( 0, 0, 0, 0.5 );
+}
+
+.faq 
+{
+    width: 80%;
+    padding: 50px 100px 100px;
+    border: 2px solid #000;
+    margin-bottom: 250px;
+}
+
+.question 
+{
+    padding: 5px 20px;
+
+    /* Creates a line between each question */
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+.answer 
+{
+    /* Hides the FAQ answer until the user clicks the 
+    FAQ question */
+    display: none;
+    padding: 40px 20px;
+}
